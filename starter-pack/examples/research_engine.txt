@@ -1,0 +1,7 @@
+ENGINE TEMPLATE: Research Analysis Engine
+Domain: Research
+Primary Agent: Senior Research Analyst
+Recommended Modules:
+- DNA Framework
+- Cognitive Architecture
+- Simulation

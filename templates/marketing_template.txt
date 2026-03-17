@@ -1,0 +1,8 @@
+ENGINE TEMPLATE: Marketing Strategy Engine
+Domain: Marketing
+Primary Agent: Senior Marketing Agent
+Recommended Modules:
+- DNA Framework
+- War-Gaming
+- Performance Evaluation
+- Simulation

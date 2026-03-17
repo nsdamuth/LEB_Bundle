@@ -1,0 +1,15 @@
+User
+  ↓
+UX Layer
+  ↓
+Engine Construction
+  ↓
+Diagnostics & Performance
+  ↓
+Personality & Cognition
+  ↓
+Optimization
+  ↓
+Ecosystem / Marketplace / Economy
+  ↓
+Simulation & World Model

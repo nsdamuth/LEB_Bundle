@@ -1,0 +1,7 @@
+ENGINE TEMPLATE: Strategy Engine
+Domain: Strategy
+Primary Agent: Senior Product Strategist
+Recommended Modules:
+- DNA Framework
+- War-Gaming
+- World Model

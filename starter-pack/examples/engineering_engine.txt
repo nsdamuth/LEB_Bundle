@@ -1,0 +1,7 @@
+ENGINE TEMPLATE: Software Architecture Engine
+Domain: Software Engineering
+Primary Agent: Senior Engineer Agent
+Recommended Modules:
+- DNA Framework
+- Performance Evaluation
+- Bake-Off Optimization

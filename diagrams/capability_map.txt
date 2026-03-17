@@ -1,0 +1,12 @@
+Core Build
+Diagnostics
+Performance
+Personality
+Cognition
+Optimization
+Ecosystem
+Marketplace
+Economy
+Simulation
+World Model
+UX Layer

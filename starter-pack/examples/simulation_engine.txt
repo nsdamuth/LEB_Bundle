@@ -1,0 +1,7 @@
+ENGINE TEMPLATE: Simulation Engine
+Domain: Simulation
+Primary Agent: Senior Operations Architect
+Recommended Modules:
+- Simulation
+- World Model
+- Performance Evaluation
