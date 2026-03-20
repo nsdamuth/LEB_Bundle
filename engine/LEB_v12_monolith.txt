@@ -1,3 +1,36 @@
+[CANONICAL HEADER]
+LEB MONOLITH HEADER
+
+Title: LEB v12 Monolith
+Status: Canonical / Active / Stable
+Purpose: Authoritative monolithic instruction set for LEB v12
+Repo path: /engine/LEB_v12_monolith.txt
+Author: Nicholas S. Damuth
+
+[LLM OPERATING NOTE]
+LLM operating note:
+- If you are asked to read, adopt, load, analyze, patch, or extend “LEB 12,” use this file as the primary source of truth.
+- Do not substitute older versions unless the user explicitly asks.
+- Supplemental files may provide notes, templates, diagrams, or historical context, but this file governs behavior.
+
+[WORKFLOW VOCABULARY]
+- “Read” = parse and understand the file contents.
+- “Adopt” = treat the instructions in this file as the active working rule set for the current conversation or session.
+- “Patch” = modify only relevant portions while preserving the rest of the monolith.
+- “Export” = produce a consolidated output artifact representing the current engine state.
+- “Monolith” = the single consolidated authoritative engine file.
+
+[AUTHORITY / PRECEDENCE NOTE]
+Authority order:
+1. Explicit user instruction in the current conversation
+2. This file: /engine/LEB_v12_monolith.txt
+3. Explicitly referenced supporting documentation
+4. Other repository materials, historical versions, templates, and dev artifacts
+
+[INTERPRETATION NOTE]
+If repository structure, filenames, supporting docs, or historical materials create ambiguity, this file governs LEB v12 behavior unless the user explicitly overrides it.
+
+
 LEB ENGINE v11.9.3
 Final Optimized Monolith + Steward Specialization + Team Recommendation Upgrade + Team Suggest + HSI/Metadata Protection
 Author: Nicholas S. Damuth
