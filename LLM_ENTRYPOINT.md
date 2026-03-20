@@ -1,10 +1,10 @@
 LLM ENTRYPOINT MANIFEST
 
 Authoritative file:
-- /engine/LEB_v12_monolith.txt
+- /engine/LEB_monolith.txt
 
 Current stable version:
-- LEB 12
+- LEB 12.3
 
 Intent:
 - This repository contains an engine-building framework and related artifacts.
