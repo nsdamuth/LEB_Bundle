@@ -17,7 +17,7 @@ When a user asks to:
 
 Priority order:
 1. Explicit user-named file
-2. /engine/LEB_v12_monolith.txt
+2. /engine/LEB_monolith.txt
 3. Supporting docs in /docs
 4. Historical/dev material elsewhere
 
