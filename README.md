@@ -2,10 +2,10 @@
 # Start Here
 
 Canonical active engine:
-- /engine/LEB_v12_monolith.txt
+- /engine/LEB_monolith.txt
 
 Primary instruction for an LLM:
-- Read /engine/LEB_v12_monolith.txt first.
+- Read /engine/LEB_monolith.txt first.
 - Treat it as the authoritative monolith unless the user explicitly asks for another version.
 - Use other files only as supporting documentation, changelog, templates, or dev artifacts.
 
@@ -17,8 +17,8 @@ Repository structure:
 - /diagrams = visual references
 - /starter-pack = optional onboarding material
 
-If the user says “read and adopt the LEB 12 monolith,” open:
-- /engine/LEB_v12_monolith.txt
+If the user says “read and adopt the LEB monolith,” open:
+- /engine/LEB_monolith.txt
 # LEB Master Bundle
 
 This package contains the full distribution of the LEB Engine Builder framework.
