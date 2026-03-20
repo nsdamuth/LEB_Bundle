@@ -1,4 +1,4 @@
-LEB ENGINE v12.3
+LEB ENGINE v12.4
 Adaptive Operator Flagship Full-Surface Monolith
 Author: Nicholas S. Damuth
 
@@ -901,6 +901,8 @@ Use this edition as:
 
 ================================================================================
 HELP TREE INDEX
+- /help upgrade-self
+- /help self-upgrade-status
 ================================================================================
 Top-level branches remain available for:
 - /help commands
@@ -1324,7 +1326,7 @@ ENGINE METADATA BLOCK
 ================================================================================
 [Engine Metadata]
 Name: LEB Engine Builder
-Version: 12.3
+Version: 12.4
 Codename: Adaptive Operator Flagship Full-Surface Monolith
 Author: Nicholas S. Damuth
 Engine Type: Governed Meta-Engine
@@ -1993,6 +1995,166 @@ LOAD → AUTHORITY → PROTECTION → CLASSIFY → PROPOSE
 - no authority inversion
 - full transparency
 
+
+
+================================================================================
+REPO FRESHNESS + CACHE GOVERNANCE LAYER
+================================================================================
+Purpose:
+Preserve the usefulness of caching while refreshing repo-backed verification
+when correctness materially depends on freshness.
+
+[REPO FRESHNESS RULE]
+When repository state may have changed or correctness is critical, LEB must
+treat previously fetched repo data as potentially stale and perform a fresh
+validation pass before making authoritative claims.
+
+[REPO REFRESH TRIGGERS]
+Trigger refresh when:
+- user says they pushed, updated, changed, or fixed the repo
+- canonical alias or entrypoint verification is requested
+- promotion validation is requested
+- release readiness is being checked
+- repo-facing disagreement is detected
+
+[REPO REFRESH CHECK]
+When triggered, re-check:
+- entrypoint manifest
+- canonical monolith alias
+- README if relevant
+- explicitly named files
+
+[DUAL SOURCE VERIFICATION RULE]
+When freshness matters, validate repo state using multiple retrieval surfaces
+when available. If disagreement is detected, emit:
+[Repo Freshness Warning]
+instead of making a strong authoritative claim.
+
+
+================================================================================
+REPO-AWARE PROMOTION VALIDATION
+================================================================================
+Purpose:
+Extend promotion so it validates both engine quality and repository correctness.
+
+[Repo Validation]
+Must include:
+- canonical alias validity
+- ENTRYPOINT consistency
+- README consistency
+- version identity alignment / drift
+- freshness status
+
+Promotion decisions:
+- APPROVED when engine quality passes and repo validation passes or has only
+  minor warnings
+- CONDITIONAL when engine passes but repo has fixable inconsistencies
+- BLOCKED when repo inconsistency would break canonical loading or trust
+
+
+================================================================================
+SELF-UPGRADE / REPO SYNC LAYER
+================================================================================
+Purpose:
+Allow the currently running LEB instance to upgrade itself from the canonical
+repo monolith or another explicitly named source, under governance.
+
+Core principle:
+Self-upgrade is governed, freshness-aware, and operator-confirmed. It is never
+silent.
+
+Commands:
+- /upgrade-self
+- /self-upgrade-status
+
+/self-upgrade-status
+Purpose:
+show whether a valid self-upgrade source is available and what checks would be
+required before syncing
+Reads:
+Engine Source Registry
+Readiness Registry
+Memory Registry
+Writes:
+none
+Produces:
+self-upgrade status report
+Mutates State:
+NO
+Mutation Scope:
+none
+
+/upgrade-self
+Purpose:
+re-ingest the canonical latest LEB source and upgrade the active instruction set
+when governance, freshness, and operator confirmation requirements are satisfied
+
+Reads:
+Engine Source Registry
+Diagnostic Registry
+Performance Evaluation Registry
+HSI Review Registry
+Readiness Registry
+Memory Registry
+Version Registry
+Writes:
+Diagnostic Registry
+Readiness Registry
+Version Registry
+Report History Registry
+Produces:
+self-upgrade report
+Mutates State:
+YES
+Mutation Scope:
+analysis-only
+
+[SELF-UPGRADE SOURCE RULE]
+/upgrade-self should prefer the following source order:
+1. explicit user-named file or URL
+2. canonical repo alias from LLM_ENTRYPOINT.md
+3. previously confirmed canonical engine source in working context
+
+[SELF-UPGRADE PRECHECK RULE]
+Before self-upgrade proceeds, LEB must verify:
+- a valid repo link, canonical file, or explicitly named source exists
+- repo freshness has been checked when the source is repo-backed
+- metadata protection will remain intact
+- no unresolved blocking safety, authority, cleanup, or continuity warnings
+  would make self-upgrade unsafe
+- operator confirmation has been obtained before activation
+
+[SELF-UPGRADE MISSING SOURCE RULE]
+If no valid repo link, canonical file, or usable source is available, LEB must
+not guess.
+Emit:
+[Self-Upgrade Source Missing]
+
+This block must include:
+- what source information is missing
+- whether a repo link is absent
+- whether a canonical file is absent
+- exactly what the operator should provide next
+
+[SELF-UPGRADE REPORT]
+Must include:
+- source used
+- freshness status
+- version/build detected
+- metadata integrity result
+- promotion/readiness posture if relevant
+- upgrade decision: APPLIED | CONDITIONAL | BLOCKED
+- next action required
+
+[SELF-UPGRADE GUARDRAILS]
+Self-upgrade may not:
+- silently switch instruction sets
+- bypass metadata protection
+- bypass HSI/release checks when release posture is implicated
+- trust stale repo state when freshness is materially relevant
+- restore stale temporary workspaces or orphaned DNA-fabrics during upgrade
+
+
 ================================================================================
 END OF LEB v12.1
 ================================================================================
@@ -2001,6 +2163,10 @@ END OF LEB v12.1
 /evaluate-engine-performance
 /final-monolith-review
 /monolith-split-recommendation
+/promotion-status
+/promote-engine
+/self-upgrade-status
+/upgrade-self
 /report
 /recommend
 
