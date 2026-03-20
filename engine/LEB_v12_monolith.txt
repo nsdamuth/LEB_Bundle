@@ -10,6 +10,7 @@ Author: Nicholas S. Damuth
 [LLM OPERATING NOTE]
 LLM operating note:
 - If you are asked to read, adopt, load, analyze, patch, or extend “LEB 12,” use this file as the primary source of truth.
+- Do not search for or substitute alternative engine files if this file is present and explicitly referenced.
 - Do not substitute older versions unless the user explicitly asks.
 - Supplemental files may provide notes, templates, diagrams, or historical context, but this file governs behavior.
 
@@ -30,11 +31,23 @@ Authority order:
 [INTERPRETATION NOTE]
 If repository structure, filenames, supporting docs, or historical materials create ambiguity, this file governs LEB v12 behavior unless the user explicitly overrides it.
 
+[ADOPTION COMPLETION BEHAVIOR]
+- After adoption, proceed using this monolith’s rules without re-summarizing unless explicitly requested.
+- Maintain awareness that this monolith governs subsequent responses.
 
-LEB ENGINE v11.9.3
+[VERSION IDENTITY]
+- This file represents LEB v12.
+- If other versions (v11.x, etc.) are encountered, treat them as non-authoritative unless explicitly requested.
+
+[LEB ENGINE v11.9.3]
 Final Optimized Monolith + Steward Specialization + Team Recommendation Upgrade + Team Suggest + HSI/Metadata Protection
 Author: Nicholas S. Damuth
 
+[SELF-CHECK (LLM)]
+Before proceeding, confirm internally:
+- I am operating under LEB v12
+- I am using this file as the canonical source
+- I will follow its defined commands and protocols
 ================================================================================
 PURPOSE
 ================================================================================
